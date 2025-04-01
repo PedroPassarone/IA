@@ -1,0 +1,29 @@
+//Azure IA
+//A API de extração de frases-chave avalia o texto não estruturado e, para cada JSON document, retorna uma lista de frases-chave.
+//Esse recurso é útil se você precisar rapidamente Identifique os pontos principais do seu texto.
+
+Use um exemplo de textos abaixo para experimentar a experiência, e foi escrito como um relatório médico:
+
+My wife and I decided to visit Los Angeles for the first time on August 17th, 2019. 
+We were staying at Contoso Hotel, located on Hollywood Boulevard, so we decided to check out nearby places to visit. 
+We bought two tickets for the Hollywood Museum to see all the popular props, costumes, and movie scenes that we grew up watching as kids.
+The place was quite large, so it was convenient that we wore our sneakers that day.
+After hours of walking and taking pictures, we decided to go for lunch at a nearby restaurant named Contoso Restaurant. 
+While the Chicken parmigiana was quite good, the Surf and turf platter was a bit disappointing. 
+It was a lovely trip overall and I especially appreciated being able to see the iconic Hollywood Sign while walking around the city.
+
+Use um exemplo de textos abaixo para experimentar a experiência, e foi escrito como um Bancário:
+
+Hello, my name is Mateo Gomez. I lost my Credit card on August 17th, and I would like to request its cancellation. The last purchase I made was of a Chicken parmigiana dish at Contoso Restaurant, located near the Hollywood Museum, for $40. Below is my personal information for validation:
+        Profession: Accountant
+        Social Security number is 123-45-6789
+        Date of birth: 9-9-1989
+        Phone number: 949-555-0110
+        Personal address: 1234 Hollywood Boulevard Los Angeles CA
+        Linked email account: mateo@contosorestaurant.com
+        Swift code: CHASUS33XXX
+
+//Frases-Chaves que ajudam a IA a montar uma dessas frases:
+
+Frases-chave
+Contoso General Hospital, Los Angeles, Califórnia, nível de oxigênio no sangue, possível fratura de costela, tomografia computadorizada de tórax, terceira costela direita, trauma torácico, fratura menor, Mateo Gomez, homem de 28 anos, acidente de carro, Hollywood Boulevard, 17 de agosto, raio-X AP, aorta torácica, A Stent, 1º de setembro, Nickolaus Schulz, número do passaporte, casa, 19h45, paciente, sinais, dificuldade, danos, pulmões, Resultados, pseudoaneurisma, primeiro, tratamento, hemorragia, 95 por cento, supervisão, cuidador
