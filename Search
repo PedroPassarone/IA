@@ -1,0 +1,25 @@
+//Search Explorer
+//coffee-index
+
+search.ismatch('sentiment','negative').
+
+//Results
+
+{
+  "@search.score": 0.2876821,
+  "text": "Review: Today I was truly disappointed with how long I had to wait for the pastries I ordered ahead of time.",
+  "metadata_storage_path": "aHR0cHM6Ly9henVyZWlzZWFyY2htb2Q0LnNlYXJjaC53aW5kb3dzLm5ldC9pbmRleGVzL2NvZmZlZS1pbmRleC9fZG9jcy8x",
+  "entities": [
+    "go",
+    "gois"
+  ],
+  "keyPhrases": [
+    "able experience",
+    "he",
+    "ies",
+    "er",
+    "ion",
+    "at",
+    "pastries"
+  ]
+}
