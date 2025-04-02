@@ -1,0 +1,73 @@
+Tudo o que a IA pode fazer, sendo Copilot ou OpenAI:
+
+Filtros de conteúdo
+Os filtros de conteúdo são ferramentas fundamentais para garantir que os resultados gerados por inteligência artificial estejam alinhados com regras específicas e objetivos éticos. 
+Eles podem ser usados para restringir conteúdos potencialmente sensíveis, como informações explícitas, violentas ou inadequadas, garantindo segurança e conformidade com normas legais ou institucionais.
+A aplicação dos filtros pode variar conforme o contexto, mas frequentemente envolve configurações personalizáveis que permitem a análise do input e do output.
+Esses filtros desempenham um papel importante em ambientes educacionais, empresariais e públicos, promovendo confiança no uso da tecnologia.
+
+Criação com IA
+A criação com IA abre portas para uma vasta gama de possibilidades. 
+A inteligência artificial pode ser usada para gerar textos como redações, poemas, e-mails ou relatórios, criar imagens artísticas, como desenhos, paisagens ou representações conceituais, e até mesmo compor música ou projetar modelos tridimensionais. 
+Essa capacidade de criação traz inovação para áreas como arte, design, marketing e entretenimento, além de democratizar o acesso a ferramentas criativas. 
+A exploração dessas possibilidades também ajuda a entender as limitações e desafios éticos relacionados ao uso de IA em processos criativos.
+
+Exemplo:
+
+O que eu pedi:
+"Faça um código que monte um caça palavras com nomes dos personagens da série de jogos Mario Bros."
+
+import random
+
+def generate_word_search(words, size):
+    grid = [['_' for _ in range(size)] for _ in range(size)]
+    
+    for word in words:
+        placed = False
+        while not placed:
+            row = random.randint(0, size - len(word))
+            col = random.randint(0, size - len(word))
+            direction = random.choice(['horizontal', 'vertical', 'diagonal'])
+            
+            if direction == 'horizontal':
+                if all(grid[row][col + i] == '_' or grid[row][col + i] == word[i] for i in range(len(word))):
+                    for i in range(len(word)):
+                        grid[row][col + i] = word[i]
+                    placed = True
+                    
+            elif direction == 'vertical':
+                if all(grid[row + i][col] == '_' or grid[row + i][col] == word[i] for i in range(len(word))):
+                    for i in range(len(word)):
+                        grid[row + i][col] = word[i]
+                    placed = True
+                    
+            elif direction == 'diagonal':
+                if all(grid[row + i][col + i] == '_' or grid[row + i][col + i] == word[i] for i in range(len(word))):
+                    for i in range(len(word)):
+                        grid[row + i][col + i] = word[i]
+                    placed = True
+    
+    # Fill the empty spaces with random letters
+    for i in range(size):
+        for j in range(size):
+            if grid[i][j] == '_':
+                grid[i][j] = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    
+    return grid
+
+def print_grid(grid):
+    for row in grid:
+        print(' '.join(row))
+
+# Lista de personagens do Mario Bros
+characters = ["MARIO", "LUIGI", "PEACH", "BOWSER", "YOSHI", "TOAD"]
+grid_size = 10
+
+# Gerar e imprimir o caça-palavras
+word_search = generate_word_search(characters, grid_size)
+print_grid(word_search)
+
+Outro exemplo só que com imagem:
+
+O que eu pedi:
+"Faça um desenho do Mario com seu irmão Luigi, cumprimentando um ao outro"
